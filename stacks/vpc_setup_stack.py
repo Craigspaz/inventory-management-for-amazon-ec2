@@ -160,7 +160,7 @@ class WASStack(NestedStack):
             self, security_group, tags: dict, prefix=""
     ) -> ec2.LaunchTemplate:
 
-        machine_image = ec2.MachineImage.latest_amazon_linux()
+        machine_image = ec2.MachineImage.latest_amazon_linux2()
         ssm_role = iam.Role(
             self,
             prefix + "WASInstanceRole",
